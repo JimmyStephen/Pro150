@@ -7,4 +7,9 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
 
 
+    @RequestMapping("hello")
+    public String hello(){
+        return "Hello I work Now";
+    }
+
 }
