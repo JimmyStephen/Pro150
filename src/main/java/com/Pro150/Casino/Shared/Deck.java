@@ -34,7 +34,7 @@ public class Deck {
         deck = retVal;
     }
 
-    //Will return the value of a card and remove it from the current deck
+    //Will return the value of a card and remove it from the current deck to effectively draw a card
     public Card drawCard(){
         Card retVal = deck.get(0);
         deck.remove(0);
