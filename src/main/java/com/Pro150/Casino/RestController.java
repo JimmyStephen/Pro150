@@ -15,7 +15,7 @@ public class RestController {
 
     @RequestMapping(path="/rngTester")
     public int testRng(){
-       return RNG.Run();
+       return RNG.RunRNG();
     }
 
 }

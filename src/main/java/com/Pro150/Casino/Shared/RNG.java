@@ -6,7 +6,7 @@ public class RNG {
 
 
 
-        public static int Run(){
+        public static int RunRNG(){
             Random rand = new Random();
             int max = 9;
             int int_rand = rand.nextInt(max) +1;
