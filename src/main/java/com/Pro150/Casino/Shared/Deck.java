@@ -17,7 +17,7 @@ public class Deck {
     }
 
     //will create a new deck of 52 cards
-    public  void newDeck(){
+    public void newDeck(){
         deck.addAll(Arrays.asList(Card.values()).subList(0, 52));
     }
 

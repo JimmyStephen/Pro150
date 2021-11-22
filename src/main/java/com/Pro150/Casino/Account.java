@@ -11,6 +11,7 @@ public class Account {
     @Id
     int Id;
 
+    Player player;
     String username;
     String password;
     int currency;
@@ -39,6 +40,14 @@ public class Account {
 
     public void setCurrency(int currency) {
         this.currency = currency;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     public ArrayList<Ticket> getTickets() {
