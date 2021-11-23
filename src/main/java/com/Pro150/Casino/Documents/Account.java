@@ -1,5 +1,7 @@
-package com.Pro150.Casino;
+package com.Pro150.Casino.Documents;
 
+import Models.Player;
+import Models.Ticket;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,12 +11,21 @@ import java.util.ArrayList;
 public class Account {
 
     @Id
-    int Id;
+    String Id;
 
     Player player;
     String username;
     String password;
     int currency;
+
+    int BlackJackWins;
+    int RoultteWins;
+    int BacklashWins;
+    int PokerWins;
+
+
+
+
 
     ArrayList<Ticket> tickets = new ArrayList<>();
 

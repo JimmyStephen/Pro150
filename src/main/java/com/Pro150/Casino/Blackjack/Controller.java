@@ -1,6 +1,6 @@
 package com.Pro150.Casino.Blackjack;
 
-import com.Pro150.Casino.Player;
+import Models.Player;
 import com.Pro150.Casino.Shared.Deck;
 
 import java.util.ArrayList;

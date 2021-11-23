@@ -1,4 +1,4 @@
-package com.Pro150.Casino;
+package Models;
 
 import com.Pro150.Casino.Shared.Deck;
 
