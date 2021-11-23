@@ -81,16 +81,12 @@ public class Controller {
 
 
     //Takes in a player's hand and a dealer's hand and compares them to see if the player wins
-    public static void findWinners(ArrayList<Deck.Card> player){
+    public static int findWinners(ArrayList<Deck.Card> player){
         //possible outcome
-            //-player win
-            //-player lose/dealer win
-            //-player blackjack (1.5* bet winnings)
-            //-Draw (money pushback)
-
-        //return options
-        //String form ("PlayerWin", "PlayerLose"/"DealerWin", "PlayerBlackjack", "Draw"/"Pushback")
-        //int form (1 - PlayerWin, 2 - PlayerLose/DealerWin, 3 - PlayerBlackjack, 4 - Draw/Pushback)
+            // 1 - Player win
+            // 2 - Player lose/dealer win
+            // 3 - Player blackjack (1.5* bet winnings)
+            // 4 - Draw (money pushback)
 
         //temp data
         int playerHand = getTotal(player);
@@ -101,24 +97,21 @@ public class Controller {
             //you can instantly leave since nothing else matters at this point
             System.out.println("Player Bust");
             //return player lose
-//            return "PlayerLose";
-//            return 2;
+            return 2;
         }
 
         //check if player has a nat 21/blackjack
         if((player.size() == 2 && playerHand == 21) && (dealer.getHandSize() != 2 || dealerHand != 21)){
             System.out.println("Player Blackjack");
             //return Player win 1.5*
-//            return "PlayerBlackjack";
-//            return 3;
+            return 3;
         }
 
         //check if dealer has a nat 21/blackjack
         if((dealer.getHandSize() == 2 && dealerHand == 21) && (player.size() != 2 || playerHand != 21)){
             System.out.println("Dealer Blackjack");
             //return playerLose
-//            return "PlayerLose";
-//            return 2;
+            return 2;
         }
 
         //check if tie
@@ -126,29 +119,25 @@ public class Controller {
             //at this point you can leave since it is a draw
             System.out.println("Draw");
             //return money pushed back
-//            return "Draw";
-//            return 4;
+            return 4;
         }
 
         //check if the dealer is over 21 if he is and the player isnt player wins
         if(dealerHand >= 22 && playerHand <= 21){
             System.out.println("Dealer Bust");
             //return player win
-//            return "PlayerWin";
-//            return 1;
+            return 1;
         }
 
         //check is player had is greater than the dealers and less than 21
         if(playerHand > dealerHand){
             System.out.println("Player Wins");
             //return player win
-//            return "PlayerWin";
-//            return 1;
+            return 1;
         }else{
             System.out.println("Dealer Wins");
             //return player lose
-//            return "PlayerLose";
-//            return 2;
+            return 2;
         }
     }
 }
