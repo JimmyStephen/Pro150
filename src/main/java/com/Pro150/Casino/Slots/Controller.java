@@ -1,7 +1,8 @@
 package com.Pro150.Casino.Slots;
 
 public class Controller {
-  private static int[] rewards = {1000,2000,5000,8000,10000,20000,50000};
+  
+    private static int[] rewards = {1000,2000,5000,8000,10000,20000,50000};
     private static int slotPos = 0;
     private enum Icons{
         grape,
