@@ -11,7 +11,6 @@ public class Controller {
     public static Deck myDeck = new Deck();
     public static Player dealer = new Player();
 
-
     public static void main(String[] args){ }
 
     public static void InIt(){
@@ -78,7 +77,6 @@ public class Controller {
         }
         return false;
     }
-
 
     //Takes in a player's hand and a dealer's hand and compares them to see if the player wins
     public static int findWinners(ArrayList<Deck.Card> player){
