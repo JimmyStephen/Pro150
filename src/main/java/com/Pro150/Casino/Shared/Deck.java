@@ -117,7 +117,7 @@ public class Deck {
         }
 
         public int getCardValue()  {return cardValue;}
-        public int getPokerValue()  {return pokerValue;}
+        public int getPokerValue() {return pokerValue;}
         public String getCardSuit(){return cardSuit;}
     }
 }

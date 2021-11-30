@@ -39,6 +39,7 @@ public class Controller {
             return 0;
         }
     }
+
     public int[] getHandScore(Deck.Card[] hand){
         if(checkForRFlush(hand)) {return getRFlush(hand);}
         if(checkForSFlush(hand)) {return getSFlush(hand);}
@@ -155,7 +156,7 @@ public class Controller {
         //get the first pair
         firstPair = getPair(hand);
 
-        //find the low pair
+        //find the second pair
         for (int i = 0; i < hand.length; i++) {
             for (int j = 0; j < hand.length; j++) {
                 if (i != j) {
@@ -174,14 +175,19 @@ public class Controller {
             }
         }
 
-        assert kicker != null;
-
-        if(firstPair[1] > secondPair.getPokerValue()) {
-            return new int[]{2, firstPair[1], secondPair.getPokerValue(), kicker.getPokerValue()};
+        if(kicker == null){
+            if(firstPair[1] > secondPair.getPokerValue()) {
+                return new int[]{2, firstPair[1], secondPair.getPokerValue(), -1};
+            }else{
+                return new int[]{2, secondPair.getPokerValue(), firstPair[1], -1};
+            }
         }else{
-            return new int[]{2, secondPair.getPokerValue(), firstPair[1], kicker.getPokerValue()};
+            if(firstPair[1] > secondPair.getPokerValue()) {
+                return new int[]{2, firstPair[1], secondPair.getPokerValue(), kicker.getPokerValue()};
+            }else{
+                return new int[]{2, secondPair.getPokerValue(), firstPair[1], kicker.getPokerValue()};
+            }
         }
-
     }
     public int[] getPair(Deck.Card[] hand){
 
@@ -359,5 +365,4 @@ public class Controller {
             }
         }
     }
-
 }
