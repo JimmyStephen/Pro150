@@ -4,6 +4,47 @@ import com.Pro150.Casino.Shared.Deck;
 
 public class Controller {
 
+    public static Deck myDeck = new Deck();
+    public static void InIt(){
+        //make a deck and shuffle
+        myDeck.newDeck();
+        myDeck.shuffleDeck();
+        myDeck.shuffleDeck();
+    }
+
+    public static Deck.Card[] startingHand(){
+        Deck.Card[] newHand = new Deck.Card[]{
+            myDeck.drawCard(),
+            myDeck.drawCard(),
+            myDeck.drawCard(),
+            myDeck.drawCard(),
+            myDeck.drawCard()
+        };
+        return newHand;
+    }
+
+//    public static Deck.Card[] test(Deck.Card[] hand, Deck.Card toReplace){
+//        for(int i = 0; i < hand.length; i++){
+//            if(hand[i] == toReplace){
+//                hand[i] = myDeck.drawCard();
+//            }
+//        }
+//        return hand;
+//    }
+
+    public static Deck.Card[] replaceCards(int numToReplace){
+        switch (numToReplace){
+            case 1:
+                return new Deck.Card[]{myDeck.drawCard()};
+            case 2:
+                return new Deck.Card[]{myDeck.drawCard(), myDeck.drawCard()};
+            case 3:
+                return new Deck.Card[]{myDeck.drawCard(), myDeck.drawCard(), myDeck.drawCard()};
+            default:
+                return null;
+        }
+    }
+
     //Will check what player has a winning hand by comparing two of them
     //Will return the number of the player (1 for player1, 2 for player2, exc, and will return 0 for tie)
     //Might change to be //    public int checkForWin(ArrayList<Deck.Card[]> playerHands) so that it takes all players at once
