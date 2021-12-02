@@ -15,18 +15,15 @@ public class Controller {
     };
     private static Icons[] icons = new Icons[3];
 
-    public static void main(String[] args)  throws IOException{
-        Spin();
-    }
-
-    public static void Spin(){
+    public static int Spin(){
         Random rand = new Random();
         int slot = rand.nextInt(7);
         icons[slotPos] = GetIcon(slot);
         slotPos++;
         if(slotPos == 3){
-            winLose(slot);
+            int reward = winLose(slot);
         }
+      return reward;
     }
     public static int winLose(int slot){
         if(icons[1] == icons[2] && icons[1] == icons[3]){
