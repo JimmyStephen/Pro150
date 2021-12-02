@@ -1,4 +1,4 @@
-package com.Pro150.Casino.Shared;
+package com.jinx.casino.Shared;
 import java.util.Random;
 
 

@@ -1,6 +1,6 @@
-package Models;
+package com.jinx.casino.Models;
 
-import com.Pro150.Casino.Shared.Deck;
+import com.jinx.casino.Shared.Deck;
 
 import java.util.ArrayList;
 

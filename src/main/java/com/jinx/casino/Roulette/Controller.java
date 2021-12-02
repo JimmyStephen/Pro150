@@ -1,6 +1,6 @@
-package com.Pro150.Casino.Roulette;
+package com.jinx.casino.Roulette;
 
-import com.Pro150.Casino.Shared.RNG;
+import java.util.Random;
 
 public class Controller {
     

@@ -1,6 +1,6 @@
-package com.Pro150.Casino.Documents;
+package com.jinx.casino.Documents;
 
-import com.Pro150.Casino.Service.AccountRepository;
+import com.jinx.casino.Service.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

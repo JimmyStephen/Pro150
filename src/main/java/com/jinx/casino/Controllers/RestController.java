@@ -1,10 +1,10 @@
-package com.Pro150.Casino.Controllers;
+package com.jinx.casino.Controllers;
 
-import com.Pro150.Casino.Documents.Account;
-import com.Pro150.Casino.Documents.BllCasino;
-import Models.Player;
-import com.Pro150.Casino.Poker.Controller;
-import com.Pro150.Casino.Shared.Deck;
+import com.jinx.casino.Documents.Account;
+import com.jinx.casino.Documents.BllCasino;
+import com.jinx.casino.Models.Player;
+import com.jinx.casino.Poker.Controller;
+import com.jinx.casino.Shared.Deck;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,5 +37,7 @@ BllCasino bll = new BllCasino();
     poker.checkForWin(player1,player2);
 
     }
+
+
 
 }
