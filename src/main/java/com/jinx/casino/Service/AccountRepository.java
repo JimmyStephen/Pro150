@@ -1,7 +1,7 @@
-package com.Pro150.Casino.Service;
+package com.jinx.casino.Service;
 
 
-import com.Pro150.Casino.Documents.Account;
+import com.jinx.casino.Documents.Account;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

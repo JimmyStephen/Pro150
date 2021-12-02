@@ -1,4 +1,4 @@
-package Models;
+package com.jinx.casino.Models;
 
 import java.util.Random;
 

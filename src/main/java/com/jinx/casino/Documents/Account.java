@@ -1,7 +1,7 @@
-package com.Pro150.Casino.Documents;
+package com.jinx.casino.Documents;
 
-import Models.Player;
-import Models.Ticket;
+import com.jinx.casino.Models.Player;
+import com.jinx.casino.Models.Ticket;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

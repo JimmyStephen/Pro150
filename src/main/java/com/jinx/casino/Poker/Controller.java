@@ -1,6 +1,6 @@
-package com.Pro150.Casino.Poker;
+package com.jinx.casino.Poker;
 
-import com.Pro150.Casino.Shared.Deck;
+import com.jinx.casino.Shared.Deck;
 
 public class Controller {
 
