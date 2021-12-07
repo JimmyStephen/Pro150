@@ -50,19 +50,22 @@ body {font-family: "Lato", sans-serif}
         <p class="w3-opacity w3-center"><i>Join to play our games!</i></p>
         <div class="w3-row w3-padding-32">
           <div class="w3-col m12">
-            <form action="/action_page.php" target="_blank">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+
+
+            <form target="_blank" method="post">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email" id="Email">
               <br>
               <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                 <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+                  <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username" id="Username">
                 </div>
                 <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
+                  <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password" id="Password">
                 </div>
               </div>
-              <button class="w3-button w3-black w3-section w3-right" type="submit">SIGN UP</button>
+              <button class="w3-button w3-black w3-section w3-right" onclick="signup()">SIGN UP</button>
             </form>
+
           </div>
         </div>
       </div>
@@ -79,6 +82,29 @@ body {font-family: "Lato", sans-serif}
         x.className = x.className.replace(" w3-show", "");
     }
     }
+
+
+
+    function signup() {
+
+      var name = document.getElementById("#Username").value;
+      var pass = document.getElementById("#Password").value;
+      var eml = document.getElementById("#Email").value;
+
+
+      const request = new XMLHttpRequest();
+      var url = "casino/signup"
+      request.open("POST", url);
+      request.setRequestHeader("content-Type", "application/json;charse=UTF-8");
+      request.send(JSON.stringify({
+        "username": name, "password": pass, "email": eml}));
+      request.onload = () => {
+        alert(request.responseText);
+        document.querySelector("#myresponse").innerHTML = request.responseText;
+
+      }
+    }
+
 </script>
 
 </body>

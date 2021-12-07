@@ -4,6 +4,8 @@ import com.jinx.casino.Service.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class BllCasino {
@@ -12,9 +14,12 @@ public class BllCasino {
     private AccountRepository repo;
 
 
-        public String add(Account account){
+
+
+
+        public void add(Account account){
         repo.save(account);
-        return account.Id;
+
         }
 
         public String delete(Account account){
@@ -24,4 +29,5 @@ public class BllCasino {
             return account.getUsername();
         }
 
-    }
+
+}
